@@ -5,6 +5,7 @@ import os
 import uuid
 
 host = os.environ.get("DATABRICKS_HOST", "dbc-efda466b-0bc1")
+host =  "dbc-efda466b-0bc1"
 
 # Set your Databricks serving endpoint URL
 DATABRICKS_ENDPOINT = f"https://{host}/serving-endpoints/react_agent/invocations"
