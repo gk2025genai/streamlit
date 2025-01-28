@@ -14,7 +14,7 @@ st.title("Ticket Chatbot")
 
 # Sidebar for configuration
 st.sidebar.header("Configuration")
-databricks_token = st.sidebar.text_input("Databricks Token", type="password")
+databricks_token = st.sidebar.text_input("Databricks Token", type="text")
 
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = str(uuid.uuid4()) 
