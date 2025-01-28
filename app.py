@@ -20,7 +20,7 @@ if "thread_id" not in st.session_state:
     st.session_state.thread_id = str(uuid.uuid4()) 
 
 st.write(f"Generated thread_id: {st.session_state.thread_id}")
-st.write(f"Generated thread_id: {DATABRICKS_ENDPOINT}")
+#st.write(f"Generated thread_id: {DATABRICKS_ENDPOINT}")
 
 # Chat history initialization
 if "messages" not in st.session_state:
