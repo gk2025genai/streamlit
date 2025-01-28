@@ -9,7 +9,6 @@ host =  "dbc-efda466b-0bc1"
 
 # Set your Databricks serving endpoint URL
 DATABRICKS_ENDPOINT = f"https://{host}/serving-endpoints/react_agent/invocations"
-print(DATABRICKS_ENDPOINT)
 # Streamlit UI
 st.title("Ticket Chatbot")
 
@@ -21,6 +20,7 @@ if "thread_id" not in st.session_state:
     st.session_state.thread_id = str(uuid.uuid4()) 
 
 st.write(f"Generated thread_id: {st.session_state.thread_id}")
+st.write(f"Generated thread_id: {DATABRICKS_ENDPOINT}")
 
 # Chat history initialization
 if "messages" not in st.session_state:
