@@ -14,7 +14,7 @@ st.title("Ticket Chatbot")
 
 # Sidebar for configuration
 st.sidebar.header("Configuration")
-databricks_token = st.sidebar.text_input("Databricks Token", type="text")
+databricks_token = st.sidebar.text_input("Databricks Token", type="text")  # Changed from "password" to "text"
 
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = str(uuid.uuid4()) 
@@ -45,9 +45,9 @@ if user_query:
 
     payload = {
         "messages": [
-            "user", user_query
+            {"role": "user", "content": user_query}
         ],
-        "config":{"thread_id": st.session_state.thread_id}
+        "config": {"thread_id": st.session_state.thread_id}
     }
 
     # Send request to Databricks LangGraph serving endpoint
